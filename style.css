@@ -1,0 +1,53 @@
+body {
+  background-color: #131313;
+  color: #e5e2e1;
+  background-image:
+    linear-gradient(to right, rgba(53, 53, 53, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(53, 53, 53, 0.12) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.grid-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(circle at center, transparent 0%, #131313 80%);
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #353535 25%,
+    #353535 50%,
+    #353535 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.pulse-outline {
+  animation: pulse-border 3s infinite alternate;
+}
+
+@keyframes pulse-border {
+  0% { border-color: #464554; }
+  100% { border-color: #c0c1ff; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
